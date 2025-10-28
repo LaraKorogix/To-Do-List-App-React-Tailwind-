@@ -1,16 +1,100 @@
-# React + Vite
+To-Do List App (React + Vite + Tailwind)
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Aplicativo simples e rápido para criar, concluir e excluir tarefas. Feito com React, Vite e Tailwind CSS, focado em produtividade, acessibilidade e UI limpa.
 
-Currently, two official plugins are available:
+✨ Recursos
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Adicionar, concluir e remover tarefas
 
-## React Compiler
+Persistência local com localStorage
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+Interface responsiva com Tailwind
 
-## Expanding the ESLint configuration
+Componentização com React Hooks
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+🧱 Tecnologias
+
+React 18 + Vite
+
+TypeScript (se aplicável ao seu template)
+
+Tailwind CSS 3
+
+ESLint + Prettier (opcional)
+```bash
+# 1) Instalar dependências
+npm install
+```
+```bash
+# 2) Rodar em desenvolvimento
+npm run dev
+```
+```bash
+# 3) Build de produção
+npm run build
+```
+```bash
+# 4) Pré-visualizar o build
+npm run preview
+```
+
+```bash
+todo-app/
+├─ public/
+├─ src/
+│  ├─ components/
+│  ├─ assets/
+│  ├─ App.tsx
+│  ├─ main.tsx
+│  └─ index.css
+├─ index.html
+├─ package.json
+└─ tailwind.config.js
+```
+
+Tailwind (configuração básica)
+```bash
+tailwind.config.js
+export default {
+  content: ["./index.html", "./src/**/*.{ts,tsx,js,jsx}"],
+  theme: { extend: {} },
+  plugins: [],
+};
+
+src/index.css
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+```
+💡 Como usar
+
+Digite o nome da tarefa e pressione Enter (ou clique em “Adicionar”).
+
+Clique na tarefa para marcar como concluída (estilo riscado).
+
+Use o ícone de lixeira para excluir.
+
+As tarefas ficam salvas no localStorage.
+
+♿ Acessibilidade
+
+Elementos clicáveis com role/labels quando necessário
+
+Estados visuais de foco (focus ring do Tailwind)
+
+Navegação por teclado
+
+🧭 Roteiro (Roadmap)
+
+ Filtro por status (Todas | Ativas | Concluídas)
+
+ Edição inline de tarefa
+
+ Drag & drop para reordenar
+
+ Contador de tarefas
+
+ Testes com Vitest/React Testing Library
+
+ Este projeto foi feito com intenções de estudo e prática, servindo como laboratório para experimentar React e Tailwind. Parte das soluções e do design tiveram inspirações em vídeos do YouTube e materiais da comunidade.
